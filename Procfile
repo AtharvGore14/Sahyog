@@ -1,1 +1,1 @@
-web: gunicorn sahyog.wsgi
+web: gunicorn sahyog.wsgi:application
