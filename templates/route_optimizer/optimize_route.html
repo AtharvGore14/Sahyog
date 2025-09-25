@@ -313,7 +313,8 @@ $(document).ready(function() {
         
         // Send optimization request with timeout
         $.ajax({
-            url: window.location.href,
+        url: '/route-optimizer/api/optimize/',
+
             method: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',

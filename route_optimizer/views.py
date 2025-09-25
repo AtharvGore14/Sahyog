@@ -1058,3 +1058,26 @@ def api_notification_clear_all(request):
     from .models import Notification
     Notification.objects.all().delete()
     return JsonResponse({'ok': True})
+
+@csrf_exempt
+def api_optimize_route(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            # TODO: replace with your actual optimization logic
+            response = {
+                "success": True,
+                "route_id": 1,  # save the new route in DB and return its ID
+                "total_distance": 12.5,
+                "total_time": 42,
+                "estimated_fuel_consumption": 3.4,
+                "optimization_score": 92,
+                "execution_time": 0.452,
+                "route_path_coords": [
+                    [18.5204, 73.8567], [19.0760, 72.8777]
+                ]
+            }
+            return JsonResponse(response)
+        except Exception as e:
+            return JsonResponse({"success": False, "error": str(e)})
+    return JsonResponse({"success": False, "error": "Invalid request"})

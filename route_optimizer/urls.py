@@ -36,7 +36,12 @@ urlpatterns = [
     path('api/route/<int:route_id>/tracking/start/', views.api_route_tracking_start, name='api_route_tracking_start'),
     path('api/route/<int:route_id>/tracking/stop/', views.api_route_tracking_stop, name='api_route_tracking_stop'),
     path('api/route/<int:route_id>/tracking/status/', views.api_route_tracking_status, name='api_route_tracking_status'),
-    path('api/history/', views.api_optimization_history, name='api_optimization_history'),
+    path('api/history/', views.api_optimization_history, 
+    
+    path('optimize/', views.optimize_route, name='optimize_route'),
+path('api/optimize/', views.api_optimize_route, name='api_optimize_route'),
+
+    name='api_optimization_history'),
     path('api/recommend/', views.api_recommend_route, name='api_recommend_route'),
     path('api/route/<int:route_id>/delete/', views.api_delete_route, name='api_delete_route'),
 ]
