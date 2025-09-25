@@ -1,1 +1,1 @@
-web: gunicorn sahayog.wsgi:application --bind 0.0.0.0:$PORT --workers=4
+web: gunicorn sahayog.wsgi --workers 3 --timeout 120
