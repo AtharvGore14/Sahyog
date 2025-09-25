@@ -1,2 +1,5 @@
 INFO 2025-09-25 15:08:07,101 autoreload 17864 18088 Watching for file changes with StatReloader
 WARNING 2025-09-25 15:08:11,842 log 17864 13952 Not Found: /favicon.ico
+INFO 2025-09-25 21:58:41,059 autoreload 10404 8500 Watching for file changes with StatReloader
+WARNING 2025-09-25 21:58:48,342 log 10404 20944 Not Found: /favicon.ico
+WARNING 2025-09-25 21:58:48,363 log 10404 20944 Not Found: /favicon.ico
