@@ -1,1 +1,1 @@
-web: gunicorn sahayog.wsgi --workers 3 --timeout 120
+web: python manage.py runserver 0.0.0.0:$PORT

@@ -15,19 +15,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-this-in-produc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://sahayog-gb9o.onrender.com",
-    "sahyog-2.onrender.com",
-    "127.0.0.1",
-    "localhost"
-]
-
-ALLOWED_HOSTS = [
-    "sahayog-gb9o.onrender.com",
-    "sahyog-2.onrender.com",
-    "127.0.0.1",
-    "localhost"
-]
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*').split(',')
 
 # Application definition
 INSTALLED_APPS = [
