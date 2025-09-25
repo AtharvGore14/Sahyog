@@ -11,6 +11,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('route-optimizer/', include('route_optimizer.urls')),
     path('', RedirectView.as_view(url='/route-optimizer/', permanent=False)),
+    
 ]
 
 # Serve media files in development
